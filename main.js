@@ -4,17 +4,17 @@ convertButton.addEventListener("click", convertText);
 function convertText() {
     const inputText = document.getElementById("inputText").value;
     let converedText = inputText.replace(/([a-z])/ig, ":alphabet-white-$1:");
-    converedText = converedText.replace("0", ":zero:");
-    converedText = converedText.replace("1", ":one:");
-    converedText = converedText.replace("2", ":two:");
-    converedText = converedText.replace("3", ":three:");
-    converedText = converedText.replace("4", ":four:");
-    converedText = converedText.replace("5", ":five:");
-    converedText = converedText.replace("6", ":six:");
-    converedText = converedText.replace("7", ":seven:");
-    converedText = converedText.replace("8", ":eight:");
-    converedText = converedText.replace("9", ":nine:");
-    converedText = converedText.replace(" ", "  ");
+    converedText = converedText.replace(/0/g, ":zero:");
+    converedText = converedText.replace(/1/g, ":one:");
+    converedText = converedText.replace(/2/g, ":two:");
+    converedText = converedText.replace(/3/g, ":three:");
+    converedText = converedText.replace(/4/g, ":four:");
+    converedText = converedText.replace(/5/g, ":five:");
+    converedText = converedText.replace(/6/g, ":six:");
+    converedText = converedText.replace(/7/g, ":seven:");
+    converedText = converedText.replace(/8/g, ":eight:");
+    converedText = converedText.replace(/9/g, ":nine:");
+    converedText = converedText.replace(/(\s)/g, "$1$1");
 
     const outputText = document.getElementById("outputText");
     outputText.value = converedText;
