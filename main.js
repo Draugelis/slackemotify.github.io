@@ -13,7 +13,7 @@ function getLetterOption() {
 
 function convertText() {
     const inputText = document.getElementById("inputText").value;
-    const output_letters = `:${getLetterOption()}:`
+    const output_letters = `:${getLetterOption()}: `
 
     let converedText = inputText.replace(/([a-z])/ig, output_letters);
     converedText = converedText.replace(/0/g, ":zero:");
