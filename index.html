@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-     <title>Emotify your text</title>
-     <link rel="stylesheet" type="text/css" href="main.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">    </head>
-    <body>
-        <div class="container-fluid d-flex flex-column justify-content-center ">
-            <div class="content input-group p-2 justify-content-center">
-                <span class="input-group-text">Input</span>
-                <textarea id="inputText"></textarea>
-                <button class="btn btn-outline-secondary" id="convertButton">Convert</button> 
-            </div>
-            <div class="content input-group p-2 justify-content-center">
-                <span class="input-group-text">Output</span>
-                <textarea id="outputText"readonly></textarea>
-                <button class="btn btn-outline-secondary" id="copyButton">Copy</button> 
-            </div>
+
+<head>
+    <title>Emotify your text</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <!-- <div class="container-fluid d-flex flex-column justify-content-center ">
+        <div class="content input-group p-2 justify-content-center">
+            <span class="input-group-text">Input</span>
+            <textarea id="inputText"></textarea>
+            <button class="btn btn-outline-secondary" id="convertButton">Convert</button>
         </div>
-        <script src='main.js'></script>
-    </body>
-</html> 
+        <div class="content input-group p-2 justify-content-center">
+            <span class="input-group-text">Output</span>
+            <textarea id="outputText" readonly></textarea>
+            <button class="btn btn-outline-secondary" id="copyButton">Copy</button>
+        </div>
+    </div>
+     -->
+
+
+    <section class="hero is-primary block">
+        <div class="hero-body">
+            <p class="title">
+                Emotify your text
+            </p>
+        </div>
+    </section>
+
+    <div class="columns">
+        <div class="column is-three-fifths is-offset-one-fifth">
+            <div class="control">
+                <label class="radio">
+                  <input type="radio" name="letters" id="alphabet-white-$1" checked>
+                  Slack white letters
+                </label>
+                <label class="radio">
+                  <input type="radio" name="letters" id="alphabet-yellow-$1">
+                  Slack yellow letters
+                </label>
+                <label class="radio">
+                  <input type="radio" name="letters" id="regional_indicator_$1">
+                  Regional indicators (For Discord)
+                </label>
+              </div>
+            <div class="field has-addons">
+                <div class="control is-expanded">
+                    <input class="block input is-rounded" type="text" placeholder="Enter text to convert" id="inputText">
+                </div>
+                <div class="control">
+                    <button class="block  button is-rounded is-primary" id="convertButton">Convert</button>
+                </div>
+              </div>
+
+              <div class="field has-addons">
+                <div class="control is-expanded">
+                    <input class="block input is-rounded" type="text" placeholder="Output" id="outputText" readonly></input>    
+                </div>
+                <div class="control">
+                    <button class="block  button is-rounded is-primary si-1" id="copyButton">Copy</button>
+                </div>
+              </div>
+        </div>
+    </div>
+    <script src='main.js'></script>
+</body>
+
+</html>
