@@ -1,9 +1,21 @@
-const convertButton = document.getElementById("convertButton");
-convertButton.addEventListener("click", convertText);
+document.getElementById("convertButton").addEventListener("click", convertText);
+document.getElementById("copyButton").addEventListener("click", copyText);
+
+function getLetterOption() {
+    const radioButtons = document.querySelectorAll('input[name="letters"]');
+    for(const radioButton of radioButtons) {
+        if(radioButton.checked) {
+            console.log(radioButton)
+            return radioButton.id;
+        }
+    }
+}
 
 function convertText() {
     const inputText = document.getElementById("inputText").value;
-    let converedText = inputText.replace(/([a-z])/ig, ":alphabet-white-$1:");
+    const output_letters = `:${getLetterOption()}:`
+
+    let converedText = inputText.replace(/([a-z])/ig, output_letters);
     converedText = converedText.replace(/0/g, ":zero:");
     converedText = converedText.replace(/1/g, ":one:");
     converedText = converedText.replace(/2/g, ":two:");
@@ -20,8 +32,6 @@ function convertText() {
     outputText.value = converedText;
 }
 
-const copyButton = document.getElementById("copyButton");
-copyButton.addEventListener("click", copyText);
 
 function copyText() {
     const outputText = document.getElementById("outputText");
